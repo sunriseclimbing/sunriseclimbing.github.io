@@ -11,10 +11,8 @@ const personSchema = {
     'Rock Climbing',
     'Sport Climbing',
     'Trad Climbing',
-    'Bouldering',
     'Climbing Safety',
     'Outdoor Education',
-    'Alpine Climbing',
   ],
   sameAs: [
     // TODO: Add social profile URLs
@@ -53,7 +51,7 @@ const faqSchema = {
       name: 'What types of climbing instruction do you offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'I offer instruction in sport climbing, trad climbing, bouldering, and alpine climbing. Sessions range from single introductory lessons to multi-day courses covering lead climbing, anchor building, multi-pitch technique, and self-rescue.',
+        text: 'I offer instruction in sport climbing and trad climbing. Sessions range from single introductory lessons to multi-day courses covering lead climbing, anchor building, and self-rescue.',
       },
     },
     {
@@ -69,41 +67,31 @@ const faqSchema = {
 
 const services = [
   {
+    id: 'beginner-lessons',
     title: 'Beginner Lessons',
     description: 'Learn the fundamentals — knots, belaying, movement, and safety — in a supportive, confidence-building environment.',
-    icon: '&#x1F9D7;',
   },
   {
+    id: 'sport-climbing',
     title: 'Sport Climbing',
     description: 'Improve your lead climbing, clipping technique, and route-reading on bolted outdoor routes.',
-    icon: '&#x26A1;',
   },
   {
+    id: 'trad-climbing',
     title: 'Trad Climbing',
     description: 'Master gear placement, anchor building, and crack climbing with hands-on trad instruction.',
-    icon: '&#x1F3D4;',
   },
   {
-    title: 'Bouldering',
-    description: 'Develop strength, technique, and problem-solving skills on shorter, powerful routes.',
-    icon: '&#x1FAA8;',
-  },
-  {
-    title: 'Multi-Pitch & Alpine',
-    description: 'Learn multi-pitch transitions, rope management, and alpine skills for big wall objectives.',
-    icon: '&#x2B50;',
-  },
-  {
+    id: 'private-guiding',
     title: 'Private Guiding',
     description: 'Custom guided climbing days tailored to your goals — from your first outdoor climb to your next project.',
-    icon: '&#x1F3AF;',
   },
 ];
 ---
 
 <BaseLayout
   title="Cameron Reismueller — Climbing Instructor | Lessons, Guiding & Courses"
-  description="Professional climbing instructor offering beginner lessons, sport and trad climbing instruction, bouldering coaching, and private guiding for all skill levels."
+  description="Professional climbing instructor offering beginner lessons, sport and trad climbing instruction, and private guiding for all skill levels."
   schemas={[personSchema, websiteSchema, faqSchema]}
 >
   <!-- Hero -->
@@ -114,7 +102,7 @@ const services = [
         Climb higher with <span class="text-primary">confidence and skill</span>
       </h1>
       <p class="text-lg text-text-muted leading-relaxed mb-8 max-w-2xl">
-        Whether you're touching rock for the first time or pushing into trad and alpine terrain, I provide hands-on instruction that builds real skills, safe habits, and lasting confidence on the wall.
+        Whether you're touching rock for the first time or pushing into trad terrain, I provide hands-on instruction that builds real skills, safe habits, and lasting confidence on the wall.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a
@@ -142,8 +130,7 @@ const services = [
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
-          <a href="/services" class="group bg-white rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-sm transition-all">
-            <div class="text-2xl mb-3" set:html={service.icon} />
+          <a href={`/services#${service.id}`} class="group bg-white rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-sm transition-all">
             <h3 class="font-semibold text-text mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
             <p class="text-sm text-text-muted leading-relaxed">{service.description}</p>
           </a>
@@ -171,7 +158,7 @@ const services = [
       <div>
         <h3 class="font-semibold text-text mb-2">What types of climbing instruction do you offer?</h3>
         <p class="text-text-muted leading-relaxed">
-          I offer instruction in sport climbing, trad climbing, bouldering, and alpine climbing. Sessions range from single introductory lessons to multi-day courses covering lead climbing, anchor building, multi-pitch technique, and self-rescue.
+          I offer instruction in sport climbing and trad climbing. Sessions range from single introductory lessons to multi-day courses covering lead climbing, anchor building, and self-rescue.
         </p>
       </div>
       <div>

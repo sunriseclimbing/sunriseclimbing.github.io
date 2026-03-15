@@ -65,6 +65,7 @@ const breadcrumbSchema = {
 
 const services = [
   {
+    id: 'beginner-lessons',
     title: 'Beginner Climbing Lessons',
     description: 'Never climbed before? No problem. I will get you comfortable on the wall with a patient, safety-first approach. By the end of your first session you will know how to tie in, belay a partner, and move efficiently on rock.',
     capabilities: [
@@ -76,6 +77,7 @@ const services = [
     ],
   },
   {
+    id: 'sport-climbing',
     title: 'Sport Climbing',
     description: 'Take your climbing outside on bolted routes. I cover everything from your first lead to pushing grades — clipping technique, route reading, falling practice, and mental skills for committing moves above your last bolt.',
     capabilities: [
@@ -87,39 +89,19 @@ const services = [
     ],
   },
   {
+    id: 'trad-climbing',
     title: 'Trad Climbing',
     description: 'Learn to place your own protection and build solid anchors. Trad climbing is the most self-reliant form of roped climbing, and I teach it with an emphasis on sound judgment and clean technique.',
     capabilities: [
       'Passive and active protection placement',
       'Anchor building (natural and gear)',
       'Crack climbing technique (hand, fist, finger, off-width)',
-      'Multi-pitch transitions and rope management',
+      'Rope management and seconding technique',
       'Self-rescue fundamentals',
     ],
   },
   {
-    title: 'Bouldering',
-    description: 'Develop raw climbing strength, technique, and problem-solving ability on shorter, powerful routes. Great for building a strong foundation or breaking through a plateau.',
-    capabilities: [
-      'Movement technique and body tension',
-      'Reading and projecting boulder problems',
-      'Spotting and pad placement safety',
-      'Training plans for strength and power',
-      'Competition-style climbing skills',
-    ],
-  },
-  {
-    title: 'Multi-Pitch & Alpine Climbing',
-    description: 'Ready for bigger objectives? I teach the systems and skills needed for long routes and mountain terrain — efficient transitions, route finding, weather awareness, and managing commitment.',
-    capabilities: [
-      'Multi-pitch belay transitions',
-      'Efficient rope management and systems',
-      'Route finding and navigation',
-      'Weather and hazard assessment',
-      'Retreat and bailout strategies',
-    ],
-  },
-  {
+    id: 'private-guiding',
     title: 'Private Guiding',
     description: 'A fully customized day on the rock tailored to your goals. Whether it is your first outdoor climb, a specific route you have been eyeing, or a skills refresher — I plan the day around what you want to get out of it.',
     capabilities: [
@@ -135,7 +117,7 @@ const services = [
 
 <BaseLayout
   title="Climbing Services — Lessons, Guiding & Courses | Cameron Reismueller"
-  description="Professional climbing instruction: beginner lessons, sport and trad climbing courses, bouldering coaching, multi-pitch skills, and private guiding for all levels."
+  description="Professional climbing instruction: beginner lessons, sport and trad climbing courses, and private guiding for all levels."
   schemas={[serviceSchema, breadcrumbSchema]}
 >
   <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-12 sm:pt-24 sm:pb-16">
@@ -154,7 +136,7 @@ const services = [
 
     <div class="space-y-12">
       {services.map((service) => (
-        <div class="bg-surface rounded-xl p-6 sm:p-8 border border-border">
+        <div id={service.id} class="bg-surface rounded-xl p-6 sm:p-8 border border-border scroll-mt-20">
           <h2 class="text-2xl font-bold text-text mb-3">{service.title}</h2>
           <p class="text-text-muted leading-relaxed mb-5">{service.description}</p>
           <ul class="space-y-2">

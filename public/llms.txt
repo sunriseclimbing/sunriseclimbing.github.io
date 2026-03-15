@@ -2,7 +2,7 @@ site: cameronreismueller.com
 name: Cameron Reismueller
 role: Climbing Instructor
 purpose: Personal website for climbing instruction and guiding services
-expertise: rock climbing, sport climbing, trad climbing, bouldering, alpine climbing, multi-pitch, climbing safety, outdoor education
-services: beginner lessons, sport climbing instruction, trad climbing courses, bouldering coaching, multi-pitch and alpine skills, private guiding
+expertise: rock climbing, sport climbing, trad climbing, climbing safety, outdoor education
+services: beginner lessons, sport climbing instruction, trad climbing courses, private guiding
 contact: phone (see /book page)
 blog: https://cameronreismueller.com/blog
