@@ -22,12 +22,12 @@ const articleSchema = {
   dateModified: (post.data.updated || post.data.date).toISOString(),
   author: {
     '@type': 'Person',
-    name: 'Anton Nikolaev',
-    url: 'https://alestainer.com',
+    name: 'Cameron Reismueller',
+    url: 'https://cameronreismueller.com',
   },
   publisher: {
     '@type': 'Person',
-    name: 'Anton Nikolaev',
+    name: 'Cameron Reismueller',
   },
 };
 
@@ -35,15 +35,15 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://alestainer.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://alestainer.com/blog' },
-    { '@type': 'ListItem', position: 3, name: post.data.title, item: `https://alestainer.com/blog/${post.id}` },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cameronreismueller.com' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://cameronreismueller.com/blog' },
+    { '@type': 'ListItem', position: 3, name: post.data.title, item: `https://cameronreismueller.com/blog/${post.id}` },
   ],
 };
 ---
 
 <BaseLayout
-  title={`${post.data.title} — Anton Nikolaev`}
+  title={`${post.data.title} — Cameron Reismueller`}
   description={post.data.description}
   image={post.data.image}
   type="article"
