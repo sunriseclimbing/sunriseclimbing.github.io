@@ -7,12 +7,12 @@ const serviceSchema = {
   provider: {
     '@type': 'Person',
     name: 'Cameron Reismueller',
-    url: 'https://cameronreismueller.com',
+    url: 'https://sunriseclimbing.github.io',
   },
   serviceType: 'Climbing Instruction & Guiding',
   areaServed: {
     '@type': 'Place',
-    name: 'Worldwide',
+    name: 'Los Angeles and Southern California',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -23,7 +23,7 @@ const serviceSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Beginner Climbing Lessons',
-          description: 'Introduction to climbing fundamentals including safety, belaying, knots, and movement technique.',
+          description: 'Learn the fundamentals of climbing — knots, belaying, movement, and safety.',
         },
       },
       {
@@ -31,7 +31,7 @@ const serviceSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Sport Climbing Instruction',
-          description: 'Lead climbing technique, clipping, and outdoor sport climbing skills.',
+          description: 'Lead climbing, clipping technique, and outdoor sport climbing skills.',
         },
       },
       {
@@ -46,8 +46,8 @@ const serviceSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Private Guiding',
-          description: 'Custom guided climbing days for individuals and small groups.',
+          name: 'Guided Days',
+          description: 'Custom guided climbing days at crags across Southern California.',
         },
       },
     ],
@@ -58,66 +58,66 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cameronreismueller.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://cameronreismueller.com/services' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sunriseclimbing.github.io' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://sunriseclimbing.github.io/services' },
   ],
 };
 
 const services = [
   {
     id: 'beginner-lessons',
-    title: 'Beginner Climbing Lessons',
-    description: 'Never climbed before? No problem. I will get you comfortable on the wall with a patient, safety-first approach. By the end of your first session you will know how to tie in, belay a partner, and move efficiently on rock.',
+    title: 'Learn to Climb',
+    description: 'You don\'t need to know anything coming in. I\'ll teach you how to tie in, belay, and move on real rock. We\'ll go at your pace, and by the end of the day you\'ll have a solid foundation to build on. I bring all the gear — just show up ready to try something new.',
     capabilities: [
-      'Harness fitting and gear orientation',
-      'Essential knots (figure-eight, clove hitch)',
-      'Belay technique and communication',
-      'Footwork and body positioning fundamentals',
-      'Indoor-to-outdoor transition guidance',
+      'Harness fitting and gear basics',
+      'Knots — figure-eight, clove hitch, the essentials',
+      'Belay technique and partner communication',
+      'Footwork and body positioning on rock',
+      'Making the jump from the gym to outdoor climbing',
     ],
   },
   {
     id: 'sport-climbing',
     title: 'Sport Climbing',
-    description: 'Take your climbing outside on bolted routes. I cover everything from your first lead to pushing grades — clipping technique, route reading, falling practice, and mental skills for committing moves above your last bolt.',
+    description: 'If you\'ve been top-roping and want to start leading on bolts, or you\'re already leading and want to climb harder outside, this is for you. We\'ll work at crags around LA and SoCal that match your level — there\'s no shortage of great sport routes out here.',
     capabilities: [
-      'Lead climbing technique and clipping',
-      'Route reading and beta analysis',
-      'Fall practice and fear management',
-      'Redpoint and onsight strategies',
-      'Outdoor ethics and crag etiquette',
+      'Lead climbing and clipping technique',
+      'Reading routes from the ground',
+      'Practicing falls so they feel less scary',
+      'Strategies for redpointing and onsighting',
+      'Crag etiquette and Leave No Trace',
     ],
   },
   {
     id: 'trad-climbing',
     title: 'Trad Climbing',
-    description: 'Learn to place your own protection and build solid anchors. Trad climbing is the most self-reliant form of roped climbing, and I teach it with an emphasis on sound judgment and clean technique.',
+    description: 'This is the stuff I get most excited about. Trad climbing means placing your own protection and relying on your own judgment. It\'s the most self-reliant way to climb and there\'s nothing quite like it. I\'ll teach you to build solid anchors, place gear you can trust, and climb cracks from fingers to fists. Southern California has some of the best trad climbing anywhere — Joshua Tree, Tahquitz, Suicide Rock — and I know these areas inside and out.',
     capabilities: [
-      'Passive and active protection placement',
-      'Anchor building (natural and gear)',
-      'Crack climbing technique (hand, fist, finger, off-width)',
-      'Rope management and seconding technique',
-      'Self-rescue fundamentals',
+      'Placing cams, nuts, and other protection',
+      'Building anchors with natural and gear placements',
+      'Crack climbing — hand jams, finger locks, fist jams, off-widths',
+      'Managing the rope on multi-pitch terrain',
+      'Self-rescue basics',
     ],
   },
   {
     id: 'private-guiding',
-    title: 'Private Guiding',
-    description: 'A fully customized day on the rock tailored to your goals. Whether it is your first outdoor climb, a specific route you have been eyeing, or a skills refresher — I plan the day around what you want to get out of it.',
+    title: 'Guided Days',
+    description: 'Maybe you just want to get outside and climb without worrying about the logistics. Tell me what sounds fun — a day at Joshua Tree, some routes at Malibu Creek, a trip out to Tahquitz — and I\'ll handle the planning. Good for first-timers, visiting climbers, or anyone who wants a local who knows the spots.',
     capabilities: [
-      'Custom itinerary based on your goals',
-      'Flexible scheduling for individuals or small groups',
-      'All technical gear provided for beginners',
-      'Photo and video of your climbing day',
-      'Post-session debrief and progression recommendations',
+      'I\'ll pick the crag and routes based on your goals',
+      'Flexible scheduling — mornings, weekdays, whatever works',
+      'All gear provided if you need it',
+      'Photos of your day on the rock',
+      'Tips on what to work on next',
     ],
   },
 ];
 ---
 
 <BaseLayout
-  title="Climbing Services — Lessons, Guiding & Courses | Cameron Reismueller"
-  description="Professional climbing instruction: beginner lessons, sport and trad climbing courses, and private guiding for all levels."
+  title="Climbing Services — Lessons, Trad, Sport & Guided Days | Sunrise Climbing"
+  description="Climbing instruction and guided days across Southern California. Beginner lessons, sport climbing, trad climbing, and custom guided days from a local with 10 years of experience."
   schemas={[serviceSchema, breadcrumbSchema]}
 >
   <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-12 sm:pt-24 sm:pb-16">
@@ -128,10 +128,10 @@ const services = [
     </nav>
 
     <h1 class="text-4xl sm:text-5xl font-bold text-text mb-6">
-      Climbing Services
+      What I Offer
     </h1>
     <p class="text-lg text-text-muted leading-relaxed max-w-2xl mb-16">
-      Whether you are just starting out or looking to push your limits, I offer instruction and guiding tailored to where you are and where you want to go.
+      I've been climbing all over Southern California for over a decade. I know the crags, I know the approaches, and I'll tailor the day to what you actually want to work on.
     </p>
 
     <div class="space-y-12">
@@ -154,15 +154,15 @@ const services = [
 
   <!-- CTA -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
-    <h2 class="text-3xl font-bold text-text mb-4">Ready to climb?</h2>
+    <h2 class="text-3xl font-bold text-text mb-4">Sounds good?</h2>
     <p class="text-text-muted mb-8 max-w-xl mx-auto">
-      Give me a call and let's figure out the right session for you. No commitment — just a conversation about your goals.
+      Give me a call and we'll figure out the right plan for you. No commitment — just a conversation about what you want to do.
     </p>
     <a
-      href="/book"
+      href="tel:+17142449286"
       class="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors"
     >
-      Get in Touch
+      (714) 244-9286
     </a>
   </section>
 </BaseLayout>

@@ -5,25 +5,23 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Cameron Reismueller',
-  url: 'https://cameronreismueller.com',
-  jobTitle: 'Climbing Instructor',
+  url: 'https://sunriseclimbing.github.io',
+  jobTitle: 'Climbing Guide & Instructor',
   knowsAbout: [
     'Rock Climbing',
     'Sport Climbing',
     'Trad Climbing',
     'Climbing Safety',
-    'Outdoor Education',
+    'Southern California Climbing',
   ],
-  sameAs: [
-    // TODO: Add social profile URLs
-  ],
+  sameAs: [],
 };
 
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Cameron Reismueller — Climbing Instructor',
-  url: 'https://cameronreismueller.com',
+  name: 'Sunrise Climbing — Cameron Reismueller',
+  url: 'https://sunriseclimbing.github.io',
 };
 
 const faqSchema = {
@@ -32,10 +30,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do I need climbing experience to take a lesson?',
+      name: 'Do I need climbing experience to book a session?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No prior experience is needed. I offer beginner-friendly sessions that cover all the fundamentals — gear, knots, belaying, movement technique, and safety. You will be climbing confidently by the end of your first session.',
+        text: 'Not at all. A lot of my clients are brand new to climbing. I bring all the gear and walk you through everything from the ground up.',
       },
     },
     {
@@ -43,23 +41,23 @@ const faqSchema = {
       name: 'What gear do I need to bring?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For introductory sessions, all technical gear is provided including harness, helmet, and climbing shoes. Just wear comfortable athletic clothing and bring water. For advanced clients, bring your own gear and we can discuss specifics when you call.',
+        text: 'If you\'re just getting started, I have everything you need — harness, helmet, shoes. Just show up in clothes you can move in and bring water. If you have your own gear, bring it and we\'ll talk through your setup.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What types of climbing instruction do you offer?',
+      name: 'Where do you climb?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'I offer instruction in sport climbing and trad climbing. Sessions range from single introductory lessons to multi-day courses covering lead climbing, anchor building, and self-rescue.',
+        text: 'All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I grew up climbing these spots and I\'ll pick the right one based on what we\'re working on and your comfort level.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I book a climbing session?',
+      name: 'How do I book?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Give me a call to discuss your goals, experience level, and schedule. I will recommend the right session type and we can set up a date that works for you.',
+        text: 'Just give me a call at (714) 244-9286. We\'ll have a quick conversation about what you\'re looking for and find a day that works.',
       },
     },
   ],
@@ -68,54 +66,54 @@ const faqSchema = {
 const services = [
   {
     id: 'beginner-lessons',
-    title: 'Beginner Lessons',
-    description: 'Learn the fundamentals — knots, belaying, movement, and safety — in a supportive, confidence-building environment.',
+    title: 'Learn to Climb',
+    description: 'Never been on rock before? I\'ll teach you the basics — how to tie in, belay, move on the wall — at a pace that feels right for you.',
   },
   {
     id: 'sport-climbing',
     title: 'Sport Climbing',
-    description: 'Improve your lead climbing, clipping technique, and route-reading on bolted outdoor routes.',
+    description: 'Ready to lead on bolts? We\'ll work on clipping, reading routes, and building the confidence to commit above your last draw.',
   },
   {
     id: 'trad-climbing',
     title: 'Trad Climbing',
-    description: 'Master gear placement, anchor building, and crack climbing with hands-on trad instruction.',
+    description: 'Learn to place your own gear and build anchors. This is climbing at its most self-reliant, and I love teaching it.',
   },
   {
     id: 'private-guiding',
-    title: 'Private Guiding',
-    description: 'Custom guided climbing days tailored to your goals — from your first outdoor climb to your next project.',
+    title: 'Guided Days',
+    description: 'Pick a crag, pick a goal, and I\'ll plan the day. Great for getting outside for the first time or ticking a route you\'ve had your eye on.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Cameron Reismueller — Climbing Instructor | Lessons, Guiding & Courses"
-  description="Professional climbing instructor offering beginner lessons, sport and trad climbing instruction, and private guiding for all skill levels."
+  title="Sunrise Climbing — Trad & Sport Climbing Instruction in Southern California"
+  description="Cameron Reismueller is a climbing guide based in Los Angeles with 10 years of experience. Trad and sport climbing instruction, guided days, and beginner lessons across Southern California."
   schemas={[personSchema, websiteSchema, faqSchema]}
 >
   <!-- Hero -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="max-w-3xl">
-      <p class="text-primary font-semibold mb-3">Climbing Instructor</p>
+      <p class="text-primary font-semibold mb-3">Los Angeles, CA</p>
       <h1 class="text-4xl sm:text-5xl font-bold text-text leading-tight mb-6">
-        Climb higher with <span class="text-primary">confidence and skill</span>
+        Explore trad climbing in <span class="text-primary">Southern California</span>
       </h1>
       <p class="text-lg text-text-muted leading-relaxed mb-8 max-w-2xl">
-        Whether you're touching rock for the first time or pushing into trad terrain, I provide hands-on instruction that builds real skills, safe habits, and lasting confidence on the wall.
+        I'm Cameron — I've been climbing for over 10 years and I grew up out here. I know the crags, I know the rock, and I'd love to show you around. Whether you're placing your first piece of gear or you've been climbing in the gym and want to get outside, I'll meet you where you are.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a
-          href="/book"
+          href="tel:+17142449286"
           class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors"
         >
-          Get in Touch
+          Call (714) 244-9286
         </a>
         <a
           href="/services"
           class="inline-flex items-center justify-center border border-border text-text px-6 py-3 rounded-lg font-medium hover:bg-surface transition-colors"
         >
-          View Services
+          What I Offer
         </a>
       </div>
     </div>
@@ -126,7 +124,7 @@ const services = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <h2 class="text-3xl font-bold text-text mb-4">What I Offer</h2>
       <p class="text-text-muted mb-10 max-w-2xl">
-        Instruction for every level — from first-time climbers to experienced leaders looking to expand their skills.
+        I keep things simple. You tell me what you want to work on, and I'll take care of the rest — the spot, the plan, the gear if you need it.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
@@ -139,32 +137,32 @@ const services = [
     </div>
   </section>
 
-  <!-- FAQ Section (AIEO optimized) -->
+  <!-- FAQ -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-    <h2 class="text-3xl font-bold text-text mb-10">Frequently Asked Questions</h2>
+    <h2 class="text-3xl font-bold text-text mb-10">Common Questions</h2>
     <div class="space-y-6 max-w-3xl">
       <div>
-        <h3 class="font-semibold text-text mb-2">Do I need climbing experience to take a lesson?</h3>
+        <h3 class="font-semibold text-text mb-2">Do I need climbing experience?</h3>
         <p class="text-text-muted leading-relaxed">
-          No prior experience is needed. I offer beginner-friendly sessions that cover all the fundamentals — gear, knots, belaying, movement technique, and safety. You'll be climbing confidently by the end of your first session.
+          Not at all. A lot of my clients are brand new to climbing. I bring all the gear and walk you through everything from the ground up.
         </p>
       </div>
       <div>
-        <h3 class="font-semibold text-text mb-2">What gear do I need to bring?</h3>
+        <h3 class="font-semibold text-text mb-2">What gear do I need?</h3>
         <p class="text-text-muted leading-relaxed">
-          For introductory sessions, all technical gear is provided including harness, helmet, and climbing shoes. Just wear comfortable athletic clothing and bring water. For advanced clients, bring your own gear and we can discuss specifics when you call.
+          If you're just getting started, I have everything you need — harness, helmet, shoes. Just show up in clothes you can move in and bring water. If you have your own gear, bring it and we'll talk through your setup.
         </p>
       </div>
       <div>
-        <h3 class="font-semibold text-text mb-2">What types of climbing instruction do you offer?</h3>
+        <h3 class="font-semibold text-text mb-2">Where do you climb?</h3>
         <p class="text-text-muted leading-relaxed">
-          I offer instruction in sport climbing and trad climbing. Sessions range from single introductory lessons to multi-day courses covering lead climbing, anchor building, and self-rescue.
+          All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I grew up climbing these spots and I'll pick the right one based on what we're working on and your comfort level.
         </p>
       </div>
       <div>
-        <h3 class="font-semibold text-text mb-2">How do I book a climbing session?</h3>
+        <h3 class="font-semibold text-text mb-2">How do I book?</h3>
         <p class="text-text-muted leading-relaxed">
-          Give me a <a href="/book" class="text-primary hover:underline">call</a> to discuss your goals, experience level, and schedule. I'll recommend the right session type and we can set up a date that works for you.
+          Just give me a <a href="tel:+17142449286" class="text-primary hover:underline">call</a>. We'll have a quick conversation about what you're looking for and find a day that works.
         </p>
       </div>
     </div>
@@ -173,15 +171,15 @@ const services = [
   <!-- CTA -->
   <section class="bg-surface py-16 sm:py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl font-bold text-text mb-4">Ready to get on the rock?</h2>
+      <h2 class="text-3xl font-bold text-text mb-4">Let's go climb something</h2>
       <p class="text-text-muted mb-8 max-w-xl mx-auto">
-        Give me a call to talk about your climbing goals. I'll help you figure out the right next step.
+        Give me a call and we'll figure out a plan. No pressure, no commitment — just a conversation.
       </p>
       <a
-        href="/book"
+        href="tel:+17142449286"
         class="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors"
       >
-        Get in Touch
+        (714) 244-9286
       </a>
     </div>
   </section>
