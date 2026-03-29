@@ -12,7 +12,7 @@ const serviceSchema = {
   serviceType: 'Climbing Instruction & Guiding',
   areaServed: {
     '@type': 'Place',
-    name: 'Los Angeles and Southern California',
+    name: 'Southern California',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -67,10 +67,9 @@ const services = [
   {
     id: 'beginner-lessons',
     title: 'Intro to Outdoor Climbing',
-    description: 'You don\'t need to know anything coming in. I\'ll teach you how to tie in, belay, and move on real rock. We\'ll go at your pace, and by the end of the day you\'ll have a solid foundation to build on. I bring all the gear — just show up ready to try something new.',
-    capabilities: [
+    description: 'You don\'t need to know anything coming in. I\'ll teach you how to tie in, belay, and move on rock. We\'ll go at your pace, and by the end of the day you\'ll have a solid foundation to build on.
       'Harness fitting and gear basics',
-      'Knots — figure-eight, clove hitch, the essentials',
+      'Knots and hitches',
       'Belay technique and partner communication',
       'Footwork and body positioning on rock',
       'Making the jump from the gym to outdoor climbing',
@@ -79,24 +78,23 @@ const services = [
   {
     id: 'sport-climbing',
     title: 'Sport Climbing',
-    description: 'If you\'ve been top-roping and want to start leading on bolts, or you\'re already leading and want to climb harder outside, this is for you. We\'ll work at crags around LA and SoCal that match your level — there\'s no shortage of great sport routes out here.',
+    description: 'If you\'ve been top-roping and want to start leading on bolts, or you\'re already leading and want to climb harder outside, this is for you. There\'s no shortage of great sport routes out here.',
     capabilities: [
       'Lead climbing and clipping technique',
       'Reading routes from the ground',
       'Practicing falls so they feel less scary',
       'Strategies for redpointing and onsighting',
-      'Crag etiquette and Leave No Trace',
     ],
   },
   {
     id: 'trad-climbing',
     title: 'Trad Climbing',
-    description: 'This is the stuff I get most excited about. Trad climbing means placing your own protection and relying on your own judgment. It\'s the most self-reliant way to climb and there\'s nothing quite like it. I\'ll teach you to build solid anchors, place gear you can trust, and climb cracks from fingers to fists. Southern California has some of the best trad climbing anywhere — Joshua Tree, Tahquitz, Suicide Rock — and I know these areas inside and out.',
+    description: 'This is the stuff I get most excited about. Trad climbing means placing your own protection and relying on your own judgment. It\'s the most self-reliant way to climb and there\'s nothing quite like it. I\'ll teach you to build solid anchors, place gear you can trust, and climb cracks from fingers to fists. Southern California is home to some world-class trad climbing within a 2 hour radius of LA/OC',
     capabilities: [
       'Placing cams, nuts, and other protection',
-      'Building anchors with natural and gear placements',
-      'Crack climbing — hand jams, finger locks, fist jams, off-widths',
-      'Managing the rope on multi-pitch terrain',
+      'Anchor Building',
+      'Crack climbing',
+      'Rope Management',
       'Self-rescue basics',
     ],
   },
@@ -106,7 +104,7 @@ const services = [
     description: 'Maybe you just want to get outside and climb without worrying about the logistics. Tell me what sounds fun — a day at Joshua Tree, some routes at Malibu Creek, a trip out to Tahquitz — and I\'ll handle the planning. Good for first-timers, visiting climbers, or anyone who wants a local who knows the spots.',
     capabilities: [
       'I\'ll pick the crag and routes based on your goals',
-      'Flexible scheduling — mornings, weekdays, whatever works',
+      'Flexible scheduling',
       'All gear provided if you need it',
       'Photos of your day on the rock',
       'Tips on what to work on next',
@@ -131,7 +129,7 @@ const services = [
       What I Offer
     </h1>
     <p class="text-lg text-text-muted leading-relaxed max-w-2xl mb-16">
-      I've been climbing all over Southern California for over a decade. I know the crags, I know the approaches, and I'll tailor the day to what you actually want to work on.
+      I've been climbing all over Southern California for over a decade. I know the crags, the approaches, and I'll tailor the day to what you actually want to work on.
     </p>
 
     <div class="space-y-12">
@@ -156,7 +154,7 @@ const services = [
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
     <h2 class="text-3xl font-bold text-text mb-4">Sounds good?</h2>
     <p class="text-text-muted mb-8 max-w-xl mx-auto">
-      Give me a call and we'll figure out the right plan for you. No commitment — just a conversation about what you want to do.
+      Give me a call and we'll figure out the right plan for you.
     </p>
     <a
       href="tel:+17142449286"
