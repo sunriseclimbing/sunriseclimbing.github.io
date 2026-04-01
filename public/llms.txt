@@ -1,8 +1,8 @@
-site: cameronreismueller.com
+site: climbtrad.com
 name: Cameron Reismueller
 role: Climbing Instructor
 purpose: Personal website for climbing instruction and guiding services
 expertise: rock climbing, sport climbing, trad climbing, climbing safety, outdoor education
 services: beginner lessons, sport climbing instruction, trad climbing courses, private guiding
 contact: phone (see /book page)
-blog: https://cameronreismueller.com/blog
+blog: https://climbtrad.com/blog
