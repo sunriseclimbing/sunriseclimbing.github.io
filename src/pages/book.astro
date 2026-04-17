@@ -5,8 +5,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://climbtrad.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Get in Touch', item: 'https://climbtrad.com/book/' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://climbtrad.com' },
+    { '@type': 'ListItem', position: 2, name: 'Get in Touch', item: 'https://climbtrad.com/book' },
   ],
 };
 ---
@@ -31,20 +31,36 @@ const breadcrumbSchema = {
         Easiest thing is to just give me a call. We'll chat about what you're looking for and go from there.
       </p>
 
-      <!-- Phone CTA -->
+      <!-- Contact CTA -->
       <div class="bg-surface rounded-2xl border border-border p-8 sm:p-12 mb-12">
-        <h2 class="text-2xl font-bold text-text mb-3">Call or text</h2>
+        <h2 class="text-2xl font-bold text-text mb-3">Reach out</h2>
         <p class="text-text-muted mb-6">
           Tell me a bit about yourself and what you want to do. I'll take it from there.
         </p>
-        <a
-          href="tel:+17142449286"
-          class="inline-flex items-center justify-center bg-primary text-white text-xl font-bold px-8 py-4 rounded-xl hover:bg-primary-dark transition-colors"
-        >
-          (714) 244-9286
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+17142449286"
+            class="inline-flex items-center justify-center bg-primary text-white text-xl font-bold px-8 py-4 rounded-xl hover:bg-primary-dark transition-colors"
+          >
+            Call or text
+          </a>
+          <a
+            href="mailto:cameron@climbtrad.com"
+            class="inline-flex items-center justify-center border border-border bg-white text-text text-xl font-bold px-8 py-4 rounded-xl hover:border-primary hover:text-primary transition-colors"
+          >
+            Send an email
+          </a>
+          <a
+            href="https://instagram.com/sunriseclimbing"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center border border-border bg-white text-text text-xl font-bold px-8 py-4 rounded-xl hover:border-primary hover:text-primary transition-colors"
+          >
+            Instagram
+          </a>
+        </div>
         <p class="text-sm text-text-muted mt-4">
-          If I don't pick up, leave a message or shoot me a text — I'll get back to you.
+          Call or text at (714) 244-9286, email cameron@climbtrad.com, or message @sunriseclimbing on Instagram.
         </p>
       </div>
 
@@ -72,3 +88,4 @@ const breadcrumbSchema = {
     </div>
   </section>
 </BaseLayout>
+
