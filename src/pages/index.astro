@@ -1,63 +1,63 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Cameron Reismueller',
-  url: 'https://climbtrad.com',
-  jobTitle: 'Climbing Guide & Instructor',
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Cameron Reismueller",
+  url: "https://climbtrad.com/",
+  jobTitle: "Climbing Guide & Instructor",
   knowsAbout: [
-    'Rock Climbing',
-    'Sport Climbing',
-    'Trad Climbing',
-    'Climbing Safety',
-    'Southern California Climbing',
+    "Rock Climbing",
+    "Sport Climbing",
+    "Trad Climbing",
+    "Climbing Safety",
+    "Southern California Climbing",
   ],
   sameAs: [],
 };
 
 const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Sunrise Climbing — Cameron Reismueller',
-  url: 'https://climbtrad.com',
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Sunrise Climbing — Cameron Reismueller",
+  url: "https://climbtrad.com/",
 };
 
 const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
   mainEntity: [
     {
-      '@type': 'Question',
-      name: 'Do I need climbing experience to book a session?',
+      "@type": "Question",
+      name: "Do I need climbing experience to book a session?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Not at all. A lot of my clients are brand new to climbing. I bring all the gear and walk you through everything from the ground up.',
+        "@type": "Answer",
+        text: "Not at all. A lot of my clients are brand new to climbing. I bring all the gear and walk you through everything from the ground up.",
       },
     },
     {
-      '@type': 'Question',
-      name: 'What gear do I need to bring?',
+      "@type": "Question",
+      name: "What gear do I need to bring?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'If you\'re just getting started, I have everything you need — harness, helmet, shoes. Just show up in clothes you can move in and bring water. If you have your own gear, bring it and we\'ll talk through your setup.',
+        "@type": "Answer",
+        text: "If you're just getting started, I have everything you need — harness, helmet, shoes. Just show up in clothes you can move in and bring water. If you have your own gear, bring it and we'll talk through your setup.",
       },
     },
     {
-      '@type': 'Question',
-      name: 'Where do you climb?',
+      "@type": "Question",
+      name: "Where do you climb?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I grew up climbing these spots and I\'ll pick the right one based on what we\'re working on and your comfort level.',
+        "@type": "Answer",
+        text: "All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I grew up climbing these spots and I'll pick the right one based on what we're working on and your comfort level.",
       },
     },
     {
-      '@type': 'Question',
-      name: 'How do I book?',
+      "@type": "Question",
+      name: "How do I book?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Just give me a call at (714) 244-9286. We\'ll have a quick conversation about what you\'re looking for and find a day that works.',
+        "@type": "Answer",
+        text: "Just give me a call at (714) 244-9286. We'll have a quick conversation about what you're looking for and find a day that works.",
       },
     },
   ],
@@ -65,31 +65,31 @@ const faqSchema = {
 
 const services = [
   {
-    id: 'beginner-lessons',
-    title: 'Learn to Climb',
-    description: 'Never been on rock before? I\'ll teach you the basics — how to tie in, belay, move on the wall — at a pace that feels right for you.',
+    id: "beginner-lessons",
+    title: "Learn to Climb Outside",
+    description: "Whether you're brand new to climbing or a beanie-wearing-boulder-bro, you'll get a feel for real rock.",
   },
   {
-    id: 'sport-climbing',
-    title: 'Sport Climbing',
-    description: 'Ready to lead on bolts? We\'ll work on clipping, reading routes, and building the confidence to commit above your last draw.',
+    id: "sport-climbing",
+    title: "Sport Climbing",
+    description: "Ready to lead the pitch outside? You'll learn how to confidently clip, climb, and clean routes.",
   },
   {
-    id: 'trad-climbing',
-    title: 'Trad Climbing',
-    description: 'Learn to place your own gear and build anchors. This is climbing at its most self-reliant, and I love teaching it.',
+    id: "trad-climbing",
+    title: "Trad Climbing",
+    description: "Learn to place solid gear and build confidence-inspiring anchors, utilizing modern techniques and systems.",
   },
   {
-    id: 'private-guiding',
-    title: 'Guided Days',
-    description: 'Pick a crag, pick a goal, and I\'ll plan the day. Great for getting outside for the first time or ticking a route you\'ve had your eye on.',
+    id: "private-guiding",
+    title: "Guided Days",
+    description: "For more experienced climbers wanting insider info and guidance on SoCal's best crags and big walls. I'll plan a day for us based on your ability.",
   },
 ];
 ---
 
 <BaseLayout
   title="Sunrise Climbing — Trad & Sport Climbing Instruction in Southern California"
-  description="Cameron Reismueller is a climbing guide based in Los Angeles with 10 years of experience. Trad and sport climbing instruction, guided days, and beginner lessons across Southern California."
+  description="Cameron Reissmueller is a climbing guide based in LA and OC with over 10 years of experience. Trad and sport climbing instruction, guided days, and beginner lessons across Southern California."
   schemas={[personSchema, websiteSchema, faqSchema]}
 >
   <!-- Hero -->
@@ -100,7 +100,7 @@ const services = [
         Explore trad climbing in <span class="text-primary">Southern California</span>
       </h1>
       <p class="text-lg text-text-muted leading-relaxed mb-8 max-w-2xl">
-        I'm Cameron — I've been climbing for over 10 years and I grew up out here. I know the crags, I know the rock, and I'd love to show you around. Whether you're placing your first piece of gear or you've been climbing in the gym and want to get outside, I'll meet you where you are.
+        Every day is an opportunity for a fresh start and a new adventure. Whether you're looking to climb for the first time or develop the skills you have, Sunrise Climbing provides a safe place to help facilitate your growth on and off the wall.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a
@@ -124,7 +124,7 @@ const services = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <h2 class="text-3xl font-bold text-text mb-4">What I Offer</h2>
       <p class="text-text-muted mb-10 max-w-2xl">
-        I keep things simple. You tell me what you want to work on, and I'll take care of the rest — the spot, the plan, the gear if you need it.
+        My goal is for you to show up with only your intention to learn something new and I'll provide everything else - gear, plan, instruction - in a way that adapts to your ability.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
@@ -156,7 +156,7 @@ const services = [
       <div>
         <h3 class="font-semibold text-text mb-2">Where do you climb?</h3>
         <p class="text-text-muted leading-relaxed">
-          All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I grew up climbing these spots and I'll pick the right one based on what we're working on and your comfort level.
+          All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I'll pick the right one based on what we're working on and your comfort level.
         </p>
       </div>
       <div>
@@ -171,9 +171,9 @@ const services = [
   <!-- CTA -->
   <section class="bg-surface py-16 sm:py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl font-bold text-text mb-4">Let's go climb something</h2>
+      <h2 class="text-3xl font-bold text-text mb-4">Book your climbing experience today</h2>
       <p class="text-text-muted mb-8 max-w-xl mx-auto">
-        Give me a call and we'll figure out a plan. No pressure, no commitment — just a conversation.
+        Give me a call or send me a text and we'll figure out a plan tailored to you.
       </p>
       <a
         href="tel:+17142449286"
