@@ -11,8 +11,12 @@ const currentPath = Astro.url.pathname;
 
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
   <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-    <a href="/" class="text-xl font-bold text-text hover:text-primary transition-colors">
-      Sunrise Climbing
+    <a href="/" class="shrink-0 transition-opacity hover:opacity-90" aria-label="SoCal Sunrise Adventures home">
+      <img
+        src="/sunrise-logo.png"
+        alt="SoCal Sunrise Adventures"
+        class="h-12 w-auto sm:h-16"
+      />
     </a>
 
     <!-- Mobile menu button -->
