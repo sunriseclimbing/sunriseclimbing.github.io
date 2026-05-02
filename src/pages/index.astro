@@ -30,10 +30,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "What is trad climbing?",
+      acceptdAnswer: {
+        "@type": "Answer",
+        text: "Traditional climbing is a method of protecting your falls with removeable gear placed by hand, as opposed to sport climbing which relies on bolts drilled into the rock. Trad climbing is considered more challenging since you must focus on both climbing and adequately protecting the climb as you lead."
+      },
+    },
+ {
+      "@type": "Question",
+      name: "Is trad climbing safe?",
+      acceptdAnswer: {
+        "@type": "Answer",
+        text: "Yes, very much so. When gear is used properly and one places protection frequently enough to avoid big falls, trad climbing is very safe. Gear is designed to sustain forces between 5-14kN, depending on the size. That's equivalent to 1,100-3000lbs of force!"
+      },
+    },
+    {
+      "@type": "Question",
       name: "Do I need climbing experience to book a session?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not at all. A lot of my clients are brand new to climbing. I bring all the gear and walk you through everything from the ground up.",
+        text: "If you've never climbed before, the intro to outside climbing experience will be perfect for you. Sport and trad climbing are more technical and require prior experience.",
       },
     },
     {
@@ -41,7 +57,7 @@ const faqSchema = {
       name: "What gear do I need to bring?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you're just getting started, I have everything you need — harness, helmet, shoes. If you have your own gear, bring it and we'll talk through your setup.",
+        text: "If you're just getting started, you don't need anything besides water, snacks, and sunscreen. If you have your own gear, bring as little or as much as you want!",
       },
     },
     {
@@ -49,7 +65,7 @@ const faqSchema = {
       name: "Where do you climb?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All over Southern California — Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, the list goes on. I grew up climbing these spots and I'll pick the right one based on what we're working on and your comfort level.",
+        text: "All over Southern California: Joshua Tree, Malibu Creek, Stoney Point, Tahquitz, etc. If there is secure, climbable rock, chances are I've been there.",
       },
     },
     {
@@ -57,7 +73,7 @@ const faqSchema = {
       name: "How do I book?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Just give me a call at (714) 244-9286. We'll have a quick conversation about what you're looking for and find a day that works.",
+        text: "Just give me a call or send me a message at (714) 244-9286. We'll have a quick conversation about what you're looking for and find a day that works.",
       },
     },
   ],
